@@ -272,7 +272,7 @@
             label = "ME";
         };
 
-        mo: mo {
+        moo: mo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp M &kp O>;
