@@ -607,6 +607,26 @@
             bindings = <&kp L &kp W &kp A>;
             label = "LWA";
         };
+
+        backslash: backslash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BSLH>;
+            label = "BACKSLASH";
+        };
+    };
+
+    behaviors {
+        minus_x: minus_x {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MINUS_X";
+            #binding-cells = <0>;
+            bindings =
+                <&kp KP_MINUS>,
+                <&kp TILDE>,
+                <&kp KP_SLASH>,
+                <&backslash>;
+        };
     };
 
     keymap {
@@ -616,7 +636,7 @@
 
         default_layer {
             bindings = <
-&kp A  &kp S  &kp U  &kp MINUS  &kp N  &kp E  &kp A  &kp I  &kp E  &kp I  &kp A  &kp O  &kp K  &kp T  &kp N  &kp S  &kp LCTRL  &lt NUMBERS ENTER  &lt NAV SPACE  &kp KP_COMMA
+&kp A  &ra  &wo  &kp MINUS  &kp N  &kp E  &kp A  &kp I  &na  &ru  &ni  &no  &kp K  &kp T  &kp N  &kp S  &kp LCTRL  &lt NUMBERS ENTER  &lt NAV SPACE  &kp KP_COMMA
             >;
         };
 
