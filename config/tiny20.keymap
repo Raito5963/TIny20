@@ -627,6 +627,15 @@
                 <&kp KP_SLASH>,
                 <&backslash>;
         };
+
+        a_la: a_la {
+            compatible = "zmk,behavior-hold-tap";
+            label = "A_LA";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <1>;
+            bindings = <&la>, <&kp>;
+        };
     };
 
     keymap {
@@ -636,7 +645,7 @@
 
         default_layer {
             bindings = <
-&kp A  &ra  &wo  &kp MINUS  &kp N  &kp E  &kp A  &kp I  &na  &ru  &ni  &no  &kp K  &kp T  &kp N  &kp S  &kp LCTRL  &lt NUMBERS ENTER  &lt NAV SPACE  &kp KP_COMMA
+&a_la 0 A  &ra  &wo  &minus_x  &kp N  &kp E  &kp A  &kp I  &na  &ru  &ni  &no  &kp K  &kp T  &kp N  &kp S  &kp LCTRL  &lt NUMBERS ENTER  &lt NAV SPACE  &kp KP_COMMA
             >;
         };
 
